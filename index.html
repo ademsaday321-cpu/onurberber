@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Onur Köykün Hairstylist</title>
+    <meta name="description" content="Konya Ereğli'de modern, profesyonel erkek saç ve sakal stüdyosu.">
+    
+    <!-- Google Fonts: Outfit (Modern Başlıklar) ve Inter (Okunaklı Metinler) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        
+        <!-- Top Logo / Brand Name (Static, not floating) -->
+        <div class="top-brand">
+            <div class="container">
+                <span class="brand-text">ONUR KOYKUN</span>
+            </div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content reveal-on-scroll">
+                <div class="rating-badge">
+                    <i class="ph-fill ph-star"></i>
+                    <span>Google'da 5.0 Puan</span>
+                </div>
+                <h1 class="hero-title">
+                    Modern,<br>Temiz ve<br>Kusursuz.
+                </h1>
+                <p class="hero-subtitle">
+                    Konya Ereğli'de tarzınızı yansıtan profesyonel saç ve sakal kesimi. İhtiyacınız olan o net ve şık görünüm için buradayız.
+                </p>
+                <div class="hero-actions">
+                    <a href="#randevu" class="btn-modern btn-gold">
+                        Randevu Oluştur
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hakkımızda / Neden Biz (Split Layout) -->
+    <section class="section about-section">
+        <div class="container">
+            <div class="about-grid reveal-on-scroll">
+                <div class="about-image-wrapper">
+                    <img src="assets/sac_kesimi.png" alt="Berber Saç Kesimi" class="about-image">
+                </div>
+                <div class="about-text-content">
+                    <h2 class="section-title">Ereğli'nin En İyi Saç Kesimi Deneyimi</h2>
+                    <p class="about-desc">
+                        Sıradan bir berber koltuğunun ötesinde, tamamen sizin yüz hatlarınıza ve tarzınıza uygun kesimler yapıyoruz. Hijyenin ve detayın ön planda olduğu salonumuzda, sadece saçınızı kesmiyor; size en uygun modern görünümü tasarlıyoruz.
+                    </p>
+                    <p class="about-desc">
+                        Kullandığımız kaliteli ürünler, profesyonel ekipmanlar ve güncel trendlere hakim vizyonumuzla, buradan her zaman %100 memnun ayrılmanızı sağlıyoruz.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="ph-fill ph-check-circle gold-icon"></i>
+                            <span>Kişiye Özel Tasarım</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-fill ph-check-circle gold-icon"></i>
+                            <span>Üst Düzey Hijyen</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ph-fill ph-check-circle gold-icon"></i>
+                            <span>Güncel Saç Trendleri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz -->
+    <section id="hizmetler" class="section services-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title text-center">Neler Yapıyoruz?</h2>
+            </div>
+            
+            <div class="services-grid reveal-on-scroll">
+                
+                <div class="service-card" onclick="openModal('modal-sac-kesimi')">
+                    <img src="assets/sac_kesimi.png" alt="Saç Kesimi">
+                    <div class="card-content">
+                        <h3>Saç Kesimi</h3>
+                        <p>Modern ve klasik kesimler</p>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openModal('modal-sakal-trasi')">
+                    <img src="assets/sakal_trasi.png" alt="Sakal Traşı">
+                    <div class="card-content">
+                        <h3>Sakal Traşı</h3>
+                        <p>Ustura ve makine ile net hatlar</p>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openModal('modal-yuz-bakimi')">
+                    <img src="assets/yuz_bakimi.png" alt="Yüz Bakımı">
+                    <div class="card-content">
+                        <h3>Yüz ve Saç Bakımı</h3>
+                        <p>Siyah nokta, maske ve terapi</p>
+                    </div>
+                </div>
+
+                <div class="service-card" onclick="openModal('modal-sac-sekillendirme')">
+                    <img src="assets/sac_sekil.png" alt="Saç Şekillendirme">
+                    <div class="card-content">
+                        <h3>Saç Şekillendirme</h3>
+                        <p>Özel günler için kalıcı fön</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Yorumlar -->
+    <section class="section testimonials-section">
+        <div class="container reveal-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title text-center">Sizden Gelen Değerli Yorumlar</h2>
+            </div>
+            
+            <div class="testimonials-wrapper">
+                <div class="testimonial-box">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review">"İstanbul'dan internette bulup geldim. Aşırı memnun kaldım. Güleryüzlü esnaf, güvenle saçınızı sakalınızı emanet edebilirsiniz. Cilt bakımı da ayrı iyiydi."</p>
+                    <span class="customer-name">Sami Aydoğdu</span>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review">"Ereğli’de uzun zamandır istediğim şekilde kesim yapan kuaför bulmakta zorlanıyordum. O günden sonra sürekli giderim. Kesinlikle tavsiye ederim."</p>
+                    <span class="customer-name">Hasan Ali Zoba</span>
+                </div>
+
+                <div class="testimonial-box">
+                    <div class="stars">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="review">"Ereğli’de uzun zaman sonra gönül rahatlığı ile traş olduğum yer. Hem hijyenik hem samimi bir dükkan. Gönül rahatlığıyla gidebilirsiniz."</p>
+                    <span class="customer-name">Berat Yıldırım</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Randevu Formu -->
+    <section id="randevu" class="section appointment-section">
+        <div class="container reveal-on-scroll">
+            <div class="appointment-layout">
+                <div class="appointment-text">
+                    <h2 class="section-title">Hemen Randevu Oluşturun</h2>
+                    <p class="appointment-desc">Beklemeden, size en uygun tarih ve saatte tıraş olmak için aşağıdaki formu doldurabilirsiniz. Randevu talebiniz anında bize ulaşacaktır.</p>
+                    
+                    <!-- Contact Info Block -->
+                    <div class="contact-info-block">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph-fill ph-phone"></i></div>
+                            <div class="contact-details">
+                                <span>Telefon</span>
+                                <strong>0543 640 85 62</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph-fill ph-map-pin"></i></div>
+                            <div class="contact-details">
+                                <span>Adres</span>
+                                <strong>Hacı Mütahir, Dr. Rauf Denktaş Cd. No:5 D:B, Ereğli/Konya</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="ph-fill ph-clock"></i></div>
+                            <div class="contact-details">
+                                <span>Çalışma Saatleri</span>
+                                <strong>Pzt - Cts: 09:00 - 21:00 (Pazar Kapalı)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-container">
+                    <form id="whatsappForm" class="clean-form">
+                        <div class="form-group">
+                            <label for="isim">Ad Soyad</label>
+                            <input type="text" id="isim" placeholder="Örn: Ahmet Yılmaz" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon Numarası</label>
+                            <input type="tel" id="telefon" placeholder="05XX XXX XX XX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="islem">Yaptırmak İstediğiniz İşlem</label>
+                            <div class="select-wrapper">
+                                <select id="islem" required>
+                                    <option value="" disabled selected>Seçiniz...</option>
+                                    <option value="Saç Kesimi">Saç Kesimi</option>
+                                    <option value="Sakal Traşı">Sakal Traşı</option>
+                                    <option value="Saç & Sakal">Saç & Sakal</option>
+                                    <option value="Yüz Bakımı">Yüz Bakımı</option>
+                                    <option value="Komple Bakım (Saç+Sakal+Yüz)">Komple Bakım</option>
+                                </select>
+                                <i class="ph ph-caret-down"></i>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tarih">Tarih</label>
+                                <input type="date" id="tarih" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="saat">Saat</label>
+                                <input type="time" id="saat" required>
+                            </div>
+                        </div>
+                        
+                        <!-- WhatsApp Button -->
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="ph-fill ph-whatsapp-logo"></i>
+                            WhatsApp ile Gönder
+                        </button>
+                        <p class="form-disclaimer">
+                            <i class="ph ph-info"></i> Buraya tıkladığınızda hazır bir mesajla WhatsApp uygulamasına yönlendirileceksiniz.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 class="footer-logo">ONUR KOYKUN</h2>
+                    <p>Erkek Saç Tasarım Merkezi. Konya Ereğli'de premium berber deneyimi.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim Bilgileri</h3>
+                    <p><i class="ph-fill ph-phone"></i> 0543 640 85 62</p>
+                    <p><i class="ph-fill ph-map-pin"></i> Hacı Mütahir, Dr. Rauf Denktaş Cd. No:5 D:B, Ereğli/Konya</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Çalışma Saatleri</h3>
+                    <p><i class="ph-fill ph-clock"></i> Pzt - Cts: 09:00 - 21:00</p>
+                    <p><i class="ph-fill ph-calendar-x"></i> Pazar: Kapalı</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Onur Koykun Hairstylist © 2026 Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS (Detaylı Hizmetler) -->
+    
+    <!-- Modal: Saç Kesimi -->
+    <div id="modal-sac-kesimi" class="modal-backdrop" onclick="closeModal(event, 'modal-sac-kesimi')">
+        <div class="modal-content">
+            <button class="close-btn" onclick="forceCloseModal('modal-sac-kesimi')"><i class="ph ph-x"></i></button>
+            <div class="modal-img-container">
+                <img src="assets/sac_kesimi.png" alt="Saç Kesimi">
+            </div>
+            <div class="modal-text">
+                <h3>Saç Kesimi</h3>
+                <p>Kafa yapınıza, yüz hatlarınıza ve saç tipinize en uygun modern veya klasik kesimleri uyguluyoruz.</p>
+                <ul class="modal-list">
+                    <li><i class="ph-bold ph-check"></i> Fade (Sıfırlamalı) Kesim</li>
+                    <li><i class="ph-bold ph-check"></i> Buzz Cut (Kısa Kesim)</li>
+                    <li><i class="ph-bold ph-check"></i> Klasik Makas Kesimi</li>
+                    <li><i class="ph-bold ph-check"></i> Kişiye Özel Modern Tasarım</li>
+                    <li><i class="ph-bold ph-check"></i> Yıkama ve Şekillendirme</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Sakal Traşı -->
+    <div id="modal-sakal-trasi" class="modal-backdrop" onclick="closeModal(event, 'modal-sakal-trasi')">
+        <div class="modal-content">
+            <button class="close-btn" onclick="forceCloseModal('modal-sakal-trasi')"><i class="ph ph-x"></i></button>
+            <div class="modal-img-container">
+                <img src="assets/sakal_trasi.png" alt="Sakal Traşı">
+            </div>
+            <div class="modal-text">
+                <h3>Sakal Traşı</h3>
+                <p>İster sinekkaydı bir tıraş, ister belirgin hatlara sahip modern bir sakal tasarımı. Profesyonel ustura ve makine kullanımıyla kusursuz sonuç.</p>
+                <ul class="modal-list">
+                    <li><i class="ph-bold ph-check"></i> Sakal Hatlarını Belirleme</li>
+                    <li><i class="ph-bold ph-check"></i> Sıcak Havlu Kompresi</li>
+                    <li><i class="ph-bold ph-check"></i> Ustura ile Sinekkaydı</li>
+                    <li><i class="ph-bold ph-check"></i> Sakal Boyama ve Gürleştirme</li>
+                    <li><i class="ph-bold ph-check"></i> Tıraş Sonrası Nemlendirici Bakım</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Yüz Bakımı -->
+    <div id="modal-yuz-bakimi" class="modal-backdrop" onclick="closeModal(event, 'modal-yuz-bakimi')">
+        <div class="modal-content">
+            <button class="close-btn" onclick="forceCloseModal('modal-yuz-bakimi')"><i class="ph ph-x"></i></button>
+            <div class="modal-img-container">
+                <img src="assets/yuz_bakimi.png" alt="Yüz Bakımı">
+            </div>
+            <div class="modal-text">
+                <h3>Yüz ve Saç Bakımı</h3>
+                <p>Sağlıklı bir cilt ve güçlü saçlar için özel maske ve terapilerle derinlemesine temizlik ve rahatlama seansı.</p>
+                <ul class="modal-list">
+                    <li><i class="ph-bold ph-check"></i> Siyah Nokta Temizliği</li>
+                    <li><i class="ph-bold ph-check"></i> Kil ve Karbon Maske Uygulaması</li>
+                    <li><i class="ph-bold ph-check"></i> Buhar Terapisi</li>
+                    <li><i class="ph-bold ph-check"></i> Yüz Peeling (Ölü deri temizliği)</li>
+                    <li><i class="ph-bold ph-check"></i> Saç Derisi Bakımı (Dökülme karşıtı)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Saç Şekillendirme -->
+    <div id="modal-sac-sekillendirme" class="modal-backdrop" onclick="closeModal(event, 'modal-sac-sekillendirme')">
+        <div class="modal-content">
+            <button class="close-btn" onclick="forceCloseModal('modal-sac-sekillendirme')"><i class="ph ph-x"></i></button>
+            <div class="modal-img-container">
+                <img src="assets/sac_sekil.png" alt="Saç Şekillendirme">
+            </div>
+            <div class="modal-text">
+                <h3>Saç Şekillendirme</h3>
+                <p>Önemli bir gününüzde veya sadece iyi hissetmek istediğinizde, uzun süre kalıcı ve havalı saç modelleri.</p>
+                <ul class="modal-list">
+                    <li><i class="ph-bold ph-check"></i> Fön ile Hacimlendirme</li>
+                    <li><i class="ph-bold ph-check"></i> Özel Pomad ve Wax Uygulaması</li>
+                    <li><i class="ph-bold ph-check"></i> Sprey ile Kalıcı Sabitleme</li>
+                    <li><i class="ph-bold ph-check"></i> Damat Traşı ve Şekillendirmesi</li>
+                    <li><i class="ph-bold ph-check"></i> Mezuniyet / Özel Gün Tasarımları</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
